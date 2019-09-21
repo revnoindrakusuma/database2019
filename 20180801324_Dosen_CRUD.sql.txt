@@ -1,0 +1,69 @@
+Latihan CRUD = Create Read Update Delete
+
+CREATE:
+
+desc DOSEN
+
+INSERT INTO DOSEN
+VALUES('8796','MARZUKI','','')//add 4 kolom dengan atribut dosen
+
+INSERT INTO DOSEN(nidn,nama)//hanya input kolom nidn dan nama
+VALUES('2065','ARIFIN')
+
+INSERT INTO DOSEN(nidn,nama,alamat)//hanya input kolom nidn, nama dan alamat
+VALUES('8965','SYAMSUL','Jl.Kenari')
+
+INSERT INTO DOSEN(nidn,nama)
+VALUES('9256','RUDI')
+
+INSERT INTO DOSEN(nidn,nama)
+VALUES('2435','JOHAN')
+
+INSERT INTO DOSEN(nidn,nama)
+VALUES('4536','LISA')
+
+
+READ:
+
+SELECT * FROM DOSEN
+
+SELECT * FROM DOSEN
+WHERE nidn = 'MARZUKI' //nidn input dengan nama tidak bisa
+
+SELECT * FROM DOSEN
+WHERE nidn = '8796' //input ok
+
+
+UPDATE:
+
+UPDATE DOSEN //untuk update database DOSEN dengan set attrib dimana primary nya 'nidn'
+SET alamat = 'Jl.Beo',
+    nohp = '081276859637',
+WHERE nidn = '8796' //dosen MARZUKI
+
+UPDATE DOSEN
+SET alamat = 'Jl.Melati',
+	nohp = '081209874740',
+WHERE nidn = '2065' //dosen ARIFIN
+
+UPDATE DOSEN
+SET nohp = '081345964287',
+WHERE nidn = '8965' //dosen SYAMSUL
+
+UPDATE DOSEN
+SET alamat = 'Jl.Kamboja',
+    nohp = '081980097746',
+WHERE nidn = '9256' //dosen RUDI
+
+UPDATE DOSEN
+SET alamat = 'Jl.Mawar',
+    nohp = '0812809564340',
+WHERE nidn = '2435' //dosen JOHAN
+
+DELETE: 
+
+DELETE DOSEN //syntax menghapus data tabel DOSEN
+WHERE nidn = '4536' //delete nidn dosen LISA
+
+send github
+20180801324_CRUD.sql
