@@ -1,0 +1,233 @@
+Refno indra kusuma
+20180801322
+Latihan CRUD = 'Create Read Update Delete'
+
+CREATE:
+
+desc T_mahasiswa
+
+INSERT INTO t_mahasiswa
+VALUES('20180801666','Lucifer','','')//add 4 kolom dengan atribut mhs
+
+INSERT INTO t_mahasiswa(nim,nama)//hanya adding kolom nim dan nama
+VALUES('20180801322','refno')
+
+INSERT INTO t_mahasiswa(nim,nama)
+VALUES('20180801386','nini')
+
+INSERT INTO t_mahasiswa(nim,nama)
+VALUES('20180801387','nono')
+
+INSERT INTO t_mahasiswa(nim,nama)
+VALUES('20180801388','nana')
+
+INSERT INTO t_mahasiswa(nim,nama)
+VALUES('20180801389','CJ')
+
+
+READ:
+
+SELECT * FROM t_mahasiswa
+
+SELECT * FROM t_mahasiswa
+WHERE nim = 'Refno' //nim input dengan nama tidak bisa
+
+SELECT * FROM t_mahasiswa
+WHERE nim = '20180801322' //inputok
+
+
+UPDATE:
+
+UPDATE t_mahasiswa //utk update database mhs dengan set attrib dimana patokan nya 'nim'
+SET alamat = 'Cluster Fresco',
+    handphone = '081386666666',
+    prody = 'Teknik informatika'
+WHERE nim = '20180801322' //mhs Refno
+
+UPDATE t_mahasiswa
+SET alamat = 'Cluster 420',
+    handphone = '081286864740',
+    prody = 'Psychology'
+WHERE nim = '20180801386' //mhs nini
+
+UPDATE t_mahasiswa
+SET alamat = 'Kampung land_of_dawn',
+    handphone = '14045',
+    prody = 'McD Delivery'
+WHERE nim = '20180801387' //mhs nono
+
+UPDATE t_mahasiswa
+SET alamat = 'Ruko Cyberpark - Karawaci',
+    handphone = '081286864746',
+    prody = 'Faculty of LAWLESS'
+WHERE nim = '20180801388' //mhs nana
+
+UPDATE t_mahasiswa
+SET alamat = 'Tigaraksa Village',
+    handphone = '081286864840',
+    prody = 'IPTEK'
+WHERE nim = '20180801389' //mhs CJ
+
+DELETE: 
+
+DELETE t_mahasiswa //syntax menghapus data tabel mhs
+WHERE nim = '20180801322' //delete nim mhs Refno
+
+Mahasiswa_Esa_Unggul
+send github
+NIM_crud.sql
+
+T_dosen
+Latihan CRUD = 'Create Read Update Delete'
+
+CREATE:
+
+desc T_Dosen
+
+INSERT INTO T_DOsen
+VALUES('20180801667','Pak_Bahrul','','')//add 4 kolom dengan atribut mhs
+
+INSERT INTO T_dosen(nidn,nama)//hanya adding kolom nim dan nama
+VALUES('20180801382','Pak_masmur')
+
+INSERT INTO T_Dosen(nidn,nama)
+VALUES('201808013823','pak_Rachel')
+
+INSERT INTO T_dosen(nidn,nama)
+VALUES('20180801384','bu_Jessica')
+
+INSERT INTO T_dosen(nidn,nama)
+VALUES('20180801385','bi_Indah')
+
+INSERT INTO T_dosen(nidn,nama)
+VALUES('20180801385','pak_SanAndreas')
+
+
+READ:
+
+SELECT * FROM T_Dosen
+
+SELECT * FROM T_Dosen
+WHERE nidn = 'Pak_masmur' //nidn input dengan nama tidak bisa
+
+SELECT * FROM T_Dosen
+WHERE nidn = '20180801382' //inputok
+
+
+UPDATE:
+
+UPDATE T_Dosen //utk update database Dosen dengan set attrib dimana patokan nya 'nidn'
+SET alamat = 'Cluster Fresco',
+    handphone = '081386666666',
+    prody = 'Computer Science Engineering'
+WHERE nidn = '201808013667' //Dosen pak_bahrul
+
+UPDATE T_Dosen
+SET alamat = 'Cluster 420',
+    handphone = '081286864740',
+    prody = 'Psychology'
+WHERE nidn = '20180801382' //Dosen_Pak_masmur
+
+UPDATE T_Dosen
+SET alamat = 'Kampung Red-Axe',
+    handphone = '14045',
+    prody = 'McD Delivery'
+WHERE nidn = '20180801383' //Dosen_Rachel
+
+UPDATE T_Dosen
+SET alamat = 'Ruko Cyberpark - Karawaci',
+    handphone = '081286864746',
+    prody = 'Faculty of LAWLESS'
+WHERE nidn = '20180801384' //Dosen_Jessica
+
+UPDATE T_Dosen
+SET alamat = 'Tigaraksa Village',
+    handphone = '081286864840',
+    prody = 'Broadcasting'
+WHERE nidn = '20180801385' //Dosen_SanAndreas
+
+DELETE: 
+
+DELETE T_Dosen //syntax menghapus data tabel mhs
+WHERE nidn = '20180801382' //delete nidn Pak_masmur
+
+Dosen_Esa_Unggul
+send github
+NIM_crud.sql
+
+Latihan CRUD = 'Create Read Update Delete'
+
+CREATE:
+
+desc T_Matkul
+
+INSERT INTO T_Matkul
+VALUES('20180801666','kode_MK','','')//add 4 kolom dengan atribut mhs
+
+INSERT INTO T_Matkul(kode_MK,nama)//hanya adding kolom nim dan nama
+VALUES('20180801381','Nama_matkul')
+
+INSERT INTO T_Matkul(Kode_MK,nama)
+VALUES('20180801382','SKS')
+
+INSERT INTO T_Matkul(Kode_MK,nama)
+VALUES('20180801383','Dosennya')
+
+INSERT INTO t_mahasiswa(kode_MK,nama)
+VALUES('20180801384','Jam')
+
+INSERT INTO t_mahasiswa(kode_MK,nama)
+VALUES('20180801385','Nama_MK')
+
+
+READ:
+
+SELECT * FROM T_Matkul
+
+SELECT * FROM T_Matkul
+WHERE Kode_MK = 'Nama_matkul' //kode_MK input dengan nama tidak bisa
+
+SELECT * FROM T_Matkul
+WHERE Kode_MK = '20180801381' //inputok
+
+
+UPDATE:
+
+UPDATE T_Matkul //utk update database mhs dengan set attrib dimana patokan nya 'nim'
+SET alamat = 'Cluster Fresco',
+    handphone = '081386666666',
+    prody = 'Computer Science Engineering'
+WHERE Kode_MK  = '20180801381' //Nama_Matkul
+
+UPDATE t_mahasiswa
+SET alamat = 'Cluster 420',
+    handphone = '081286864740',
+    prody = 'Psychology'
+WHERE Kode_MK  = '20180801382' //SKS
+
+UPDATE t_mahasiswa
+SET alamat = 'Kampung Red-Axe',
+    handphone = '14045',
+    prody = 'McD Delivery'
+WHERE Kode_MK = '20180801383' //Dosennya
+
+UPDATE t_mahasiswa
+SET alamat = 'Ruko Cyberpark - Karawaci',
+    handphone = '081286864746',
+    prody = 'Faculty of LAWLESS'
+WHERE Kode_MK  = '20180801384' //Jam
+
+UPDATE t_mahasiswa
+SET alamat = 'Tigaraksa Village',
+    handphone = '081286864840',
+    prody = 'Broadcasting'
+WHERE Kode_MK= '20180801385' //Kode_MK
+
+DELETE: 
+
+DELETE t_mahasiswa //syntax menghapus data tabel mhs
+WHERE Kode_MK  = '20180801381' //delete nim mhs daniel
+
+Matkul_Esa_Unggul
+send github
+NIM_crud.sql
