@@ -1,0 +1,43 @@
+Latihan CRUD = 'Create Read Update Delete'
+
+CREATE:
+
+desc t_mahasiswa
+
+INSERT INTO t_mahasiswa
+VALUES('20180801315','Heri_iskandar','','')//add 4 kolom dengan atribut mhs
+
+INSERT INTO t_mahasiswa(nim,nama)//hanya adding kolom nim dan nama
+VALUES('20180801315','Heri_iskandar')
+
+INSERT INTO t_mahasiswa(nim,nama)
+VALUES('20180801315','Heri_iskandar')
+
+
+READ:
+
+SELECT * FROM t_mahasiswa
+
+SELECT * FROM t_mahasiswa
+WHERE nim = 'Heri_iskandar' //nim input dengan nama tidak bisa
+
+SELECT * FROM t_mahasiswa
+WHERE nim = '20180801315' //inputok
+
+
+UPDATE:
+
+UPDATE t_mahasiswa //utk update database mhs dengan set attrib dimana patokan nya 'nim'
+SET alamat = 'Tangerang_Kota',
+    handphone = '082134652141',
+    prody = 'Informatika'
+WHERE nim = '20180801315'
+
+DELETE: 
+
+DELETE t_mahasiswa //syntax menghapus data tabel mhs
+WHERE nim = '20180801315'
+
+Dosen_Esa_Unggul
+send github
+NIM_crud.sql
