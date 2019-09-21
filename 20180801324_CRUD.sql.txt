@@ -1,0 +1,69 @@
+Latihan CRUD = Create Read Update Delete
+
+CREATE:
+
+desc MAHASISWA
+
+INSERT INTO MAHASISWA
+VALUES('20180801324','Laras','','')//add 4 kolom dengan atribut mahasiswa
+
+INSERT INTO MAHASISWA(nim,nama)//hanya input kolom nim dan nama
+VALUES('20180801310','Faro')
+
+INSERT INTO MAHASISWA(nim,nama,alamat)//hanya input kolom nim, nama dan alamat
+VALUES('20180801384','Regina','Jl.Mangga')
+
+INSERT INTO MAHASISWA(nim,nama)
+VALUES('20180801369','Aulia')
+
+INSERT INTO MAHASISWA(nim,nama)
+VALUES('20180801317','Ade')
+
+INSERT INTO MAHASISWA(nim,nama)
+VALUES('20180801322','Indra')
+
+
+READ:
+
+SELECT * FROM MAHASISWA
+
+SELECT * FROM MAHASISWA
+WHERE nim = 'Laras' //nim input dengan nama tidak bisa
+
+SELECT * FROM MAHASISWA
+WHERE nim = '20180801381' //input ok
+
+
+UPDATE:
+
+UPDATE MAHASISWA //untuk update database mahasiswa dengan set attrib dimana primary nya 'nim'
+SET alamat = 'Jl.Arwana',
+    nohp = '081276858907',
+WHERE nim = '20180801324' //mahasiswa Laras
+
+UPDATE MAHASISWA
+SET alamat = 'Jl.Cupang',
+	nohp = '081288764740',
+WHERE nim = '20180801310' //mahasiswa Faro
+
+UPDATE MAHASISWA
+SET nohp = '081345679087',
+WHERE nim = '20180801384' //mahasiswa Regina
+
+UPDATE MAHASISWA
+SET alamat = 'Jl.Belimbing',
+    nohp = '081980864746',
+WHERE nim = '20180801369' //mahasiswa Aulia
+
+UPDATE MAHASISWA
+SET alamat = 'Jl.Mawar',
+    nohp = '0812868664340',
+WHERE nim = '20180801317' //mahasiswa Ade
+
+DELETE: 
+
+DELETE MAHASISWA //syntax menghapus data tabel mahasiswa
+WHERE nim = '20180801322' //delete nim mahasiswa Indra
+
+send github
+20180801324_CRUD.sql
