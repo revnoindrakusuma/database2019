@@ -1,0 +1,42 @@
+Latihan CRUD = 'Create Read Update Delete'
+
+CREATE:
+
+desc t_dosen
+
+INSERT INTO t_dosen
+VALUES('11111','bapak_budi','','')//add 4 kolom dengan atribut mhs
+
+INSERT INTO t_dosen(NID,nama)//hanya adding kolom NID dan nama
+VALUES('11111','bapak_budi')
+
+INSERT INTO t_dosen(NID,nama)
+VALUES('11111','bapak_budi
+
+READ:
+
+SELECT * FROM t_dosen
+
+SELECT * FROM t_dosen
+WHERE NID = 'bapak_budi' //NID input dengan nama tidak bisa
+
+SELECT * FROM t_dosen
+WHERE NID = '11111' //inputoke
+
+
+UPDATE:
+
+UPDATE t_dosen //utk update database mhs dengan set attrib dimana patokan nya 'NIDN'
+SET alamat = 'JONGGOL',
+    handphone = '089522911051',
+    prody = 'Tata Boga'
+WHERE NID = '11111'
+
+DELETE: 
+
+DELETE t_dosen //syntax menghapus data tabel mhs
+WHERE  NID = '11111'
+
+Dosen_Esa_Unggul
+send github
+NIM_crud.sql
