@@ -1,0 +1,68 @@
+select * from T_mahasiswa
+
+select * from T_dosen
+
+select * from T_wali
+
+INSERT INTO T_wali (nim,nidn)
+values('20180801319', '1122');
+
+INSERT INTO t_wali (nim,nidn)
+values('20180801311', '3344');
+
+INSERT INTO t_wali (nim,nidn)
+values('20180801311', '1122');
+
+INSERT INTO t_wali (nim,nidn)
+values('20180801319', '3344');
+
+INSERT INTO t_wali (nim,nidn)
+values('20180801319', '5566');
+
+=========================================================================================================
+
+select * from T_matakuliah
+
+INSERT INTO t_matakuliah (kode_mk,nama_matakuliah,kelas)
+values('UEUAL','Algoritma','CR111')
+
+INSERT INTO t_matakuliah (kode_mk,nama_matakuliah,kelas)
+values('UEUSO','Sistem Operasi','CR222')
+
+INSERT INTO t_matakuliah (kode_mk,nama_matakuliah,kelas)
+values('UEUBD','Basis Data','CR333')
+
+
+
+=========================================================================================================
+
+
+select * from t_dosen_pengampu
+
+INSERT INTO t_dosen_pengampu (nidn,kode_mk)
+values('1122', 'UEUAL')
+
+INSERT INTO t_dosen_pengampu (nidn,kode_mk)
+values('3344', 'UEUSO')
+
+INSERT INTO t_dosen_pengampu (nidn,kode_mk)
+values('5566', 'UEUBD')
+
+
+
+
+=========================================================================================================
+
+
+
+select * from t_krs_daniel
+
+INSERT INTO t_krs_daniel (nim,kode_mk)
+values('20180801319','UEUAL')
+
+INSERT INTO t_krs_daniel
+values('20180801311', 'UEUBD')
+
+
+
+
