@@ -1,0 +1,31 @@
+﻿SELECT * FROM T_krs
+
+CREATE :
+
+DESK T_krs
+
+INSERT INTO T_krs
+VALUES ('20180801311', 'CCB210')//add 3 kolom dengan atribut krs
+
+INSERT INTO T_krs
+VALUES ('201808013112', 'ESA148')//hanya adding kolom nim dan kode mata kuliah
+
+INSERT INTO T_krs
+VALUES ('20180801322', 'CCS210')
+
+
+
+CREATE :
+
+DESK T_Pengampu
+
+SELECT * FROM T_Pengampu
+
+INSERT INTO T_Pengampu 
+VALUES ('2050005', 'CCB210')
+
+INSERT INTO T_Pengampu
+VALUES ('2060006', 'ESA148')
+
+INSERT INTO T_Pengampu
+VALUES ('2070007', 'CCS210')
