@@ -1,0 +1,30 @@
+select * from P_Mahasiswa
+
+select * from Dosen1
+
+select * from P_Wali1
+
+select * from P_matkul
+
+
+insert into P_wali(nidn,nim)
+values ('2769','20180801361')
+
+INSERT INTO P_matakuliah(kdmk,nama)
+VALUES('ESA109','Sistem Operasi')
+
+INSERT INTO P_matakuliah(kdmk,nama)
+VALUES('ESA802','Kalkulus2')
+
+insert into P_pengajar (nidn,kode)
+values ('1334','ESA802')
+
+insert into P_pengajar (nidn,kode)
+values ('6723','ESA109')
+
+
+insert into P_jadwalkuli (nim,kode)
+values ('20180801362','ESA101')
+
+insert into P_jadwalkuli (nim,kode)
+values ('20180801362','ESA148')
