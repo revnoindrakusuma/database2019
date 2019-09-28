@@ -1,6 +1,6 @@
 Refno indra kusuma
 20180801322
-Latihan CRUD = 'Create Read Update Delete'
+Latihan CRUD = 'Create Reader Update Delete'
 
 CREATE:
 
@@ -70,7 +70,7 @@ WHERE nim = '20180801389' //mhs CJ
 
 DELETE: 
 
-DELETE t_mahasiswa //syntax menghapus data tabel mhs
+DELETE from t_mahasiswa //syntax menghapus data tabel mhs
 WHERE nim = '20180801322' //delete nim mhs Refno
 
 Mahasiswa_Esa_Unggul
@@ -148,7 +148,7 @@ WHERE nidn = '20180801385' //Dosen_SanAndreas
 
 DELETE: 
 
-DELETE T_Dosen //syntax menghapus data tabel mhs
+DELETE from T_Dosen //syntax menghapus data tabel mhs
 WHERE nidn = '20180801382' //delete nidn Pak_masmur
 
 Dosen_Esa_Unggul
@@ -199,25 +199,25 @@ SET alamat = 'Cluster Fresco',
     prody = 'Computer Science Engineering'
 WHERE Kode_MK  = '20180801381' //Nama_Matkul
 
-UPDATE t_mahasiswa
+UPDATE t_Matkul
 SET alamat = 'Cluster 420',
     handphone = '081286864740',
     prody = 'Psychology'
 WHERE Kode_MK  = '20180801382' //SKS
 
-UPDATE t_mahasiswa
+UPDATE t_Matkul
 SET alamat = 'Kampung Red-Axe',
     handphone = '14045',
     prody = 'McD Delivery'
 WHERE Kode_MK = '20180801383' //Dosennya
 
-UPDATE t_mahasiswa
+UPDATE t_Matkul
 SET alamat = 'Ruko Cyberpark - Karawaci',
     handphone = '081286864746',
     prody = 'Faculty of LAWLESS'
 WHERE Kode_MK  = '20180801384' //Jam
 
-UPDATE t_mahasiswa
+UPDATE t_Matkul
 SET alamat = 'Tigaraksa Village',
     handphone = '081286864840',
     prody = 'Broadcasting'
@@ -225,7 +225,7 @@ WHERE Kode_MK= '20180801385' //Kode_MK
 
 DELETE: 
 
-DELETE t_mahasiswa //syntax menghapus data tabel mhs
+DELETE from t_Matkul //syntax menghapus data tabel mhs
 WHERE Kode_MK  = '20180801381' //delete nim mhs daniel
 
 Matkul_Esa_Unggul
