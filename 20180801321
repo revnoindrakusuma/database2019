@@ -1,0 +1,32 @@
+select * from t_mahasiswa
+
+select * from t_dosen
+
+select * from t_wali
+
+select * from t_matkul
+
+select * from t_
+
+
+insert into t_wali(nidn,nim)
+values ('369854','20180801322')
+
+INSERT INTO t_matakuliah(kdmk,nama)
+VALUES('ESA101','Pendidikan Kewargangaraan')
+
+INSERT INTO t_matakuliah(kdmk,nama)
+VALUES('ESA148','Kalkulus2')
+
+insert into t_pengajar (nidn,kode)
+values ('311846','ESA148',)
+
+insert into t_pengajar (nidn,kode)
+values ('264864','ESA101',)
+
+
+insert into t_jadwalkuli (nim,kode)
+values ('20180801321','ESA101',)
+
+insert into t_jadwalkuli (nim,kode)
+values ('20180801322','ESA148',)
