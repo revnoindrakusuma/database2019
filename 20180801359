@@ -1,0 +1,145 @@
+  
+--insert data mahasiswa
+insert into MAHASISWA (NIM, NAMA) VALUES ('20180801359','hendi sukma wijaya')
+insert into MAHASISWA (NIM, NAMA) VALUES ('20180801333','haduh widodo')
+insert into MAHASISWA (NIM, NAMA) VALUES ('20180801321','harto purnomo')
+insert into MAHASISWA (NIM, NAMA) VALUES ('20180801341','harisko bimo')
+insert into MAHASISWA (NIM, NAMA) VALUES ('20180801399','hani adelia')
+
+( melihat semua data mahasiswa )
+select * from MAHASISWA
+
+( melihat semua data mahasiswa dengan pengurutan nim dari terkecil ke terbesar )
+select * from MAHASISWA order by NIM asc
+
+( delete mahasiswa )
+delete from MAHASISWA where NIM='20180801316'
+
+( update mahasiswa )
+update MAHASISWA set NIM='20180801316', NAMA='wied artha pratama wap' where NIM='20180801316'
+
+( insert data dosen )
+insert into DOSEN (NIDN, NAMA) VALUES ('4343','agung mulyo')
+insert into DOSEN (NIDN, NAMA) VALUES ('4345','binastya anggara')
+insert into DOSEN (NIDN, NAMA) VALUES ('4346','Arief')
+insert into DOSEN (NIDN, NAMA) VALUES ('4347','bahrul ulum')
+insert into DOSEN (NIDN, NAMA) VALUES ('4348','masmur tarigam')
+
+( melihat semua data dosen )
+select * from DOSEN
+
+( melihat semua data dosen dengan pengurutan nidn dari terkecil ke terbesar )
+select * from DOSEN order by NIDN asc
+
+( delete dosen )
+delete from DOSEN where NIDN='7135'
+
+( update dosen )
+update DOSEN set NIDN='7135', NAMA='aa bahrul' where NIDN='7135'
+
+( insert data wali )
+insert into WALI (NIDN, NIM) VALUES ('4343','20180801359')
+insert into WALI (NIDN, NIM) VALUES ('4345','20180801333')
+insert into WALI (NIDN, NIM) VALUES ('4346','20180801321')
+insert into WALI (NIDN, NIM) VALUES ('4347','20180801341')
+insert into WALI (NIDN, NIM) VALUES ('4348','20180801399')
+
+( melihat semua data wali )
+select * from WALI
+
+( melihat semua data wali dengan pengurutan id dari terkecil ke terbesar )
+select * from WALI order by ID asc
+
+( delete wali )
+delete from WALI where ID=1
+
+( update wali )
+update WALI set NIDN='4343', NIM='20180801359' where ID=1
+
+( membuat trigger untuk auto increment wali )
+CREATE OR REPLACE TRIGGER WALI_TRG
+ BEFORE INSERT ON WALI
+ FOR EACH ROW
+BEGIN
+ SELECT WALI_SEQ.nextval
+ INTO :new.ID
+ FROM dual;
+END;
+
+( insert data matakuliah )
+
+insert into MATAKULIAH (KDMK, NAMA, SKS) VALUES ('CCB999','Bahasa Indonesia', 4)
+insert into MATAKULIAH (KDMK, NAMA, SKS) VALUES ('CCR998','Toefl 2', 3)
+insert into MATAKULIAH (KDMK, NAMA, SKS) VALUES ('CCP787','Kalkulus 2', 4)
+insert into MATAKULIAH (KDMK, NAMA, SKS) VALUES ('ESA422','Pendidikan Pancasila', 2)
+insert into MATAKULIAH (KDMK, NAMA, SKS) VALUES ('ESA313','Sistem Informasi', 1)
+
+( melihat semua data matakuliah )
+select * from MATAKULIAH
+
+( melihat semua data matakuliah dengan pengurutan sks dari terkecil ke terbesar )
+select * from MATAKULIAH order by SKS asc
+
+( delete matakuliah )
+delete from MATAKULIAH where KDMK='ESA313'
+
+( update matakuliah )
+update MATAKULIAH set KDMK='ESA351', NAMA='Pendidikan Pancasila', SKS=2 where KDMK='ESA313'
+
+( insert data pengampu )
+insert into PENGAMPU (NIDN, KDMK) VALUES ('4343','CCB999')
+insert into PENGAMPU (NIDN, KDMK) VALUES ('4345','CCR998')
+insert into PENGAMPU (NIDN, KDMK) VALUES ('4346','CCP787')
+insert into PENGAMPU (NIDN, KDMK) VALUES ('4347','ESA422')
+insert into PENGAMPU (NIDN, KDMK) VALUES ('4348','ESA313')
+
+( melihat semua data pengampu )
+select * from PENGAMPU
+
+( melihat semua data pengampu dengan pengurutan id dari terkecil ke terbesar )
+select * from PENGAMPU order by ID asc
+
+( delete pengampu )
+delete from PENGAMPU where ID=1
+
+( update pengampu )
+update PENGAMPU set NIDN='4343', KDMK='CCB999' where ID=1
+
+( membuat trigger untuk auto increment pengampu )
+CREATE OR REPLACE TRIGGER PENGAMPU_TRG
+ BEFORE INSERT ON PENGAMPU
+ FOR EACH ROW
+BEGIN
+ SELECT PENGAMPU_SEQ.nextval
+ INTO :new.ID
+ FROM dual;
+END;
+
+--insert data krs
+insert into KRS (NIM, KDMK) VALUES ('20180801359','CCB999')
+insert into KRS (NIM, KDMK) VALUES ('20180801333','CCR998')
+insert into KRS (NIM, KDMK) VALUES ('20180801321','CCP787')
+insert into KRS (NIM, KDMK) VALUES ('20180801341','ESA422')
+insert into KRS (NIM, KDMK) VALUES ('20180801399','ESA313')
+
+( melihat semua data krs )
+select * from KRS
+
+( melihat semua data krs dengan pengurutan id dari terkecil ke terbesar )
+select * from KRS order by ID asc
+
+( delete krs )
+delete from KRS where ID=1
+
+( update krs )
+update KRS set NIDN='20180801399', KDMK='CCB999' where ID=1
+
+( membuat trigger untuk auto increment krs )
+CREATE OR REPLACE TRIGGER KRS_TRG
+ BEFORE INSERT ON KRS
+ FOR EACH ROW
+BEGIN
+ SELECT KRS_SEQ.nextval
+ INTO :new.ID
+ FROM dual;
+END
