@@ -1,0 +1,21 @@
+CREATE TABLE  "T_DOSEN" 
+   (	"NIDN" VARCHAR2(4) NOT NULL ENABLE, 
+	"DOSEN" VARCHAR2(25) NOT NULL ENABLE, 
+	"NAMA_MATAKULIAH" VARCHAR2(50), 
+	"KODE" VARCHAR2(12), 
+	 CONSTRAINT "T_DOSEN_PK" PRIMARY KEY ("NIDN") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_T_DOSEN" 
+  before insert on "T_DOSEN"               
+  for each row  
+begin   
+  if :NEW."NIDN" is null then 
+    select "T_DOSEN_SEQ".nextval into :NEW."NIDN" from sys.dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_T_DOSEN" ENABLE
+/

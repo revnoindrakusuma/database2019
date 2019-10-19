@@ -1,0 +1,21 @@
+CREATE TABLE  "T_MAHASISWA" 
+   (	"NIM" VARCHAR2(11) NOT NULL ENABLE, 
+	"NAMA" VARCHAR2(25) NOT NULL ENABLE, 
+	"ALAMAT" VARCHAR2(50), 
+	"PHONE" VARCHAR2(12), 
+	 CONSTRAINT "T_MAHASISWA_PK" PRIMARY KEY ("NIM") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_T_MAHASISWA" 
+  before insert on "T_MAHASISWA"               
+  for each row  
+begin   
+  if :NEW."NIM" is null then 
+    select "T_MAHASISWA_SEQ".nextval into :NEW."NIM" from sys.dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_T_MAHASISWA" ENABLE
+/

@@ -1,0 +1,21 @@
+CREATE TABLE  "T_MATAKULIAH" 
+   (	"KODE_MK" VARCHAR2(6) NOT NULL ENABLE, 
+	"JUDUL_MK" VARCHAR2(15) NOT NULL ENABLE, 
+	"FAKULTAS" VARCHAR2(25), 
+	"SKS" VARCHAR2(2), 
+	 CONSTRAINT "T_MATAKULIAH_PK" PRIMARY KEY ("KODE_MK") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_T_MATAKULIAH" 
+  before insert on "T_MATAKULIAH"               
+  for each row  
+begin   
+  if :NEW."KODE_MK" is null then 
+    select "T_MATAKULIAH_SEQ".nextval into :NEW."KODE_MK" from sys.dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_T_MATAKULIAH" ENABLE
+/
