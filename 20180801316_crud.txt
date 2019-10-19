@@ -114,3 +114,34 @@ BEGIN
  INTO :new.ID
  FROM dual;
 END;
+
+-- 1. menampilkan krs dengan nama mahasiswa
+select distinct K.NIM, M.NAMA, K.KDMK, MK.NAMA
+from KRS K, MAHASISWA M, MATAKULIAH MK
+where M.NIM=K.NIM 
+and MK.KDMK=K.KDMK
+and M.NAMA='wied artha pratama'
+-- 2. menampilkan dosen pengampu matakuliah basis data
+select distinct P.NIDN, D.NAMA, P.KDMK, MK.NAMA
+from PENGAMPU P, DOSEN D, MATAKULIAH MK
+where D.NIDN=P.NIDN
+and MK.KDMK=P.KDMK
+and MK.NAMA='Basis Data'
+-- 3. menampilkan mahasiswa yang dosen walinya bahrul ulum
+select distinct W.NIM, D.NAMA, W.NIM, M.NAMA
+from WALI W, DOSEN D, MAHASISWA M
+where D.NIDN=W.NIDN
+and M.NIM=W.NIM
+and D.NAMA='bahrul ulum'
+-- 4. dosen yang memiliki mahasiswa terbanyak
+select distinct D.NAMA, count(W.NIDN) as JUMLAH
+from WALI W, DOSEN D
+where W.NIDN=D.NIDN
+group by W.NIDN, D.NAMA
+order by JUMLAH desc;
+-- 5. matakuliah favorit
+select distinct MK.NAMA, count(K.KDMK) as JUMLAH
+from KRS K, MATAKULIAH MK
+where K.KDMK=MK.KDMK
+group by K.KDMK, MK.NAMA
+order by JUMLAH desc;
